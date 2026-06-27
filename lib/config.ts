@@ -11,6 +11,7 @@ export type InputCatalogItem = {
 
 export const APP_CONFIG = {
   APPS_SCRIPT_URL:
+    process.env.NEXT_PUBLIC_APPS_SCRIPT_URL ||
     "https://script.google.com/macros/s/AKfycbz0LA9GkJS62HA-StocVu9xybM1a_Mw1OG1fnSdKZEGJzo4L5f8rVIhqj5qh7x5YdsS/exec",
   STORAGE_KEYS: {
     SESSION: "dslc2026_session",
