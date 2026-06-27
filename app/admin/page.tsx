@@ -321,6 +321,12 @@ export default function AdminPage() {
         <main className="grid">
           <Card span={6}>
             <h3>Đăng nhập Admin</h3>
+            <form
+              onSubmit={(event) => {
+                event.preventDefault();
+                void loginAdmin();
+              }}
+            >
             <div className="form-grid">
               <Field label="Email">
                 <TextInput type="email" placeholder="Nhập email admin" value={loginEmail} onChange={(event) => setLoginEmail(event.target.value)} />
@@ -330,10 +336,11 @@ export default function AdminPage() {
               </Field>
             </div>
             <div className="actions">
-              <button className="btn-primary" type="button" onClick={loginAdmin}>
+              <button className="btn-primary" type="submit">
                 Đăng nhập
               </button>
             </div>
+            </form>
           </Card>
         </main>
         {feedback}
